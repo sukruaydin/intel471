@@ -53,4 +53,6 @@ public class StepDefs {
     public void userRemovesAllProductsFromCart() {
         homePage.removeAllProductsFromCart();
     }
+
+
 }

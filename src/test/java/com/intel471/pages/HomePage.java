@@ -21,6 +21,7 @@ public final class HomePage extends BasePage{
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
+    //================================= LOCATORS =================================
 
     @FindBy(id = "twotabsearchtextbox")
     public WebElement searchBox;
@@ -53,27 +54,70 @@ public final class HomePage extends BasePage{
     public List<WebElement> deleteButtons;
 
 
+    //================================= METHODS =================================
 
+    /**
+     * searches the given product
+     * adds the FIRST AVAILABLE product into Cart
+     * it checks only the first page
+     * @param product
+     */
     public void searchAndAddTheFirstProductToCart(String product){
         try {
+            //it clears the box -- just in case something written beforehand
             searchBox.clear();
+            //enters the desired product name and clicks ENTER
             searchBox.sendKeys(product + Keys.ENTER);
+            //verifies the title
             verifyTitle("Amazon.com : "+product);
+
+
+            //clicks on first displayed product
             firstProduct.click();
+
+            //if product is available "add to cart" button is displayed, if not "add to list" button is displayed)
+            //waits for "add to cart" button to be displayed
+            //if not --> it continues execution with catch block
+            //if yes --> it continues execution with getting the productTitle and adding it to cart
             waitVisibilityOf(addToCartButton);
-            System.out.println(productTitle.getText() + " -- is added to cart!");
+
+            //getting the product title
+            String productTitleText = productTitle.getText();
+            //clicking on "add to cart" button
             addToCartButton.click();
             waitVisibilityOf(addedToCartText);
+            //asserting
             Assert.assertTrue(addedToCartText.isDisplayed());
+            System.out.println(productTitleText + " -- has been added to Cart!");
         }catch (Exception e){
-            Driver.getDriver().navigate().back();
-            secondProduct.click();
-            waitVisibilityOf(addToCartButton);
-            System.out.println(productTitle.getText() + " -- is added to cart!");
-            addToCartButton.click();
-            waitVisibilityOf(addedToCartText);
-            Assert.assertTrue(addedToCartText.isDisplayed());
+            //it will continue by trying to find next product which is AVAILABLE for shipping
+            int i = 2;
+
+            //One page has 28 products
+            while (i<=28){
+                try {
+                    Driver.getDriver().navigate().back();
+                    WebElement element = Driver.getDriver().findElement(By.xpath("//img[@data-image-index=\""+i+"\"]"));
+                    waitVisibilityOf(element);
+                    element.click();
+                    //if it finds available element, loop gets terminated
+                    //if it doesn't find available element, loop keeps going to find available product in the first page by iterating i by 1
+                    //if it can't find available element in the 1st page, it will fail
+
+                    waitVisibilityOf(addToCartButton);
+                    String productTitleText = productTitle.getText();
+                    addToCartButton.click();
+                    waitVisibilityOf(addedToCartText);
+                    Assert.assertTrue(addedToCartText.isDisplayed());
+                    System.out.println(productTitleText + " -- has been added to Cart!");
+                    break;
+                }catch (RuntimeException ex){
+                    i++;
+                }
+            }
+            throw new RuntimeException("Available product can't be found in 1st page!");
         }
+
 
     }
 

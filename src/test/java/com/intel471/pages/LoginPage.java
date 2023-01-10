@@ -33,6 +33,7 @@ public final class LoginPage extends BasePage{
     public void login(){
         emailBar.sendKeys(ConfigurationReader.getProperty("username"));
         continueButton.click();
+        waitVisibilityOf(passwordBar);
         passwordBar.sendKeys(ConfigurationReader.getProperty("password"));
         signInButton.click();
         verifyTitle("Amazon.com. Spend less. Smile more.");

@@ -6,8 +6,9 @@ Feature:
     Given User navigates amazon.com
     When User clicks sign in bar
     And User logs in
-    Then User searches "selenium", adds the first product to cart
-    Then User searches "turkish coffee", adds the first product to cart
+    Then User searches "bbb", adds the first product to cart
+    Then User searches "aaa", adds the first product to cart
+    Then User searches "tabak", adds the first product to cart
 
   @2
   Scenario: User can remove product(s) from cart
