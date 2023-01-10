@@ -33,7 +33,7 @@ public class APIUtils {
         System.out.println("number of people older than "+age+" is : "+ids.size());
     }
 
-    public static void createAnEmployeeOderThanAge(int age){
+    public static int createAnEmployeeOderThanAge(int age){
         baseURI = ConfigurationReader.getProperty("apiUrl");
 
         String firstName = faker.name().firstName();
@@ -54,8 +54,11 @@ public class APIUtils {
 
         String nameOfEmployee = response.jsonPath().getString("data.name");
         int ageOfEmployee = response.jsonPath().getInt("data.age");
+        int id = response.jsonPath().getInt("data.id");
         System.out.println("Say Hello to new colleague named : " + nameOfEmployee);
         System.out.println(nameOfEmployee + " is " + ageOfEmployee + " years old.");
+
+        return id;
     }
 
     public static void updateAnEmployee(int id, String name, int salary, int age){
@@ -72,6 +75,18 @@ public class APIUtils {
                 .when().put("/update/{id}")
                 .then().statusCode(200)
                 .and().body("message", Matchers.is("Successfully! Record has been updated."))
+                .and().extract().response();
+        response.prettyPrint();
+    }
+
+    public static void deleteAnEmployee(int id){
+        baseURI = ConfigurationReader.getProperty("apiUrl");
+
+        Response response = given().contentType(ContentType.JSON)
+                .and().pathParam("id",id)
+                .when().delete("/delete/{id}")
+                .then().statusCode(200)
+                .and().body("message", Matchers.is("Successfully! Record has been deleted"))
                 .and().extract().response();
         response.prettyPrint();
     }

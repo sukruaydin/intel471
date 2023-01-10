@@ -2,6 +2,7 @@ package com.intel471.step_defs;
 
 import com.intel471.utils.APIUtils;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.response.Response;
 
@@ -10,6 +11,7 @@ import java.util.List;
 public class StepDefs_API {
 
     private Response allEmployees;
+    private int id;
 
     @Given("User sends GET request to retrieve all employees")
     public void userSendsGETRequestToRetrieveAllEmployees() {
@@ -25,12 +27,17 @@ public class StepDefs_API {
 
     @Given("User sends POST request to create new employee older than {int}")
     public void userSendsPOSTRequestToCreateNewEmployeeOlderThan(int age) {
-        APIUtils.createAnEmployeeOderThanAge(35);
+        id = APIUtils.createAnEmployeeOderThanAge(age);
     }
 
 
-    @Given("User updates employee whose id number is {int}, {string}, {int}, {int}")
-    public void userUpdatesEmployeeWhoseIdNumberIs(int id, String name, int salary, int age) {
+    @Given("User updates the recently created employee {string}, {int}, {int}")
+    public void userUpdatesTheRecentlyCreatedEmployee(String name, int salary, int age) {
         APIUtils.updateAnEmployee(id,name,salary,age);
+    }
+
+    @Then("User deletes recently created employee")
+    public void userDeletesRecentlyCreatedEmployee() {
+        APIUtils.deleteAnEmployee(id);
     }
 }
