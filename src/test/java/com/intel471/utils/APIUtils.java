@@ -18,6 +18,11 @@ public class APIUtils {
 
     private static Faker faker = new Faker();
 
+
+    /**
+     * sends GET request, returns all employees in Response object
+     * @return
+     */
     public static Response getAllEmployees(){
         baseURI = ConfigurationReader.getProperty("apiUrl");
 
@@ -27,13 +32,30 @@ public class APIUtils {
                 .and().extract().response();
     }
 
+
+    /**
+     * prints id values of employees older than given age
+     * prints number of employees older than given age
+     * @param response
+     * @param age
+     */
     public static void numberOfEmployeesOlderThanAge(Response response, int age){
         List<Integer> ids = response.jsonPath().get("data.findAll {it.employee_age>"+age+"}.id");
         System.out.println("id numbers of people older than "+age+" : "+ids);
         System.out.println("number of people older than "+age+" is : "+ids.size());
     }
 
-    public static int createAnEmployeeOderThanAge(int age){
+
+    /**
+     * sends POST request, creates a random employee older than given age
+     * asserts statusCode is 200
+     * asserts response message is "Successfully! Record has been added."
+     * prints the name and age of the recently created employee
+     * returns recently created employee id
+     * @param age
+     * @return
+     */
+    public static int createAnEmployeeOlderThanAge(int age){
         baseURI = ConfigurationReader.getProperty("apiUrl");
 
         String firstName = faker.name().firstName();
@@ -61,6 +83,17 @@ public class APIUtils {
         return id;
     }
 
+
+    /**
+     * sends PUT request, updates the employee given by id with the provided values of name, salary, age
+     * asserts statusCode is 200
+     * asserts response message is "Successfully! Record has been updated."
+     * prints the response body
+     * @param id
+     * @param name
+     * @param salary
+     * @param age
+     */
     public static void updateAnEmployee(int id, String name, int salary, int age){
         baseURI = ConfigurationReader.getProperty("apiUrl");
 
@@ -79,6 +112,14 @@ public class APIUtils {
         response.prettyPrint();
     }
 
+
+    /**
+     * sends DELETE request, deletes the employee by given id
+     * asserts statusCode is 200
+     * asserts response message is "Successfully! Record has been deleted"
+     * prints the response body
+     * @param id
+     */
     public static void deleteAnEmployee(int id){
         baseURI = ConfigurationReader.getProperty("apiUrl");
 

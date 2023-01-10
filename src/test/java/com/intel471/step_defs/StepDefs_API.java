@@ -6,10 +6,9 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.response.Response;
 
-import java.util.List;
-
 public class StepDefs_API {
 
+    //setting some fields as class level --> to be able to use them in other methods
     private Response allEmployees;
     private int id;
 
@@ -24,12 +23,10 @@ public class StepDefs_API {
         APIUtils.numberOfEmployeesOlderThanAge(allEmployees,age);
     }
 
-
     @Given("User sends POST request to create new employee older than {int}")
     public void userSendsPOSTRequestToCreateNewEmployeeOlderThan(int age) {
-        id = APIUtils.createAnEmployeeOderThanAge(age);
+        id = APIUtils.createAnEmployeeOlderThanAge(age);
     }
-
 
     @Given("User updates the recently created employee {string}, {int}, {int}")
     public void userUpdatesTheRecentlyCreatedEmployee(String name, int salary, int age) {
