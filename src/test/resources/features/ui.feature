@@ -1,14 +1,17 @@
 @ui
 Feature:
 
+  # Background keyword could have been used for the first 3 steps of the scenarios.
+  # In case you would ask me to automate sth more and also to make it read easier I didn't use it.
+
   @1
   Scenario: User can add product(s) to the cart
     Given User navigates amazon.com
     When User clicks sign in bar
     And User logs in
-    Then User searches "bbb", adds the first product to cart
-    Then User searches "aaa", adds the first product to cart
-    Then User searches "tabak", adds the first product to cart
+    Then User searches "selenium", adds the first product to cart
+    Then User searches "turkish coffee", adds the first product to cart
+    Then User searches "statue of liberty", adds the first product to cart
 
   @2
   Scenario: User can remove product(s) from cart
