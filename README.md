@@ -1,6 +1,6 @@
 # Case Study Assessment by Intel471
 
-In this repository, 2 test automation case studies (UI&API) assigned by Intel471 are performed by following Cucumber BBD Framework.  
+In this repository, 2 test automation case studies (UI & API) assigned by Intel471 are performed by following Cucumber BBD Framework.  
 
 ## Instructions
 Test Scenarios are prepared by;
@@ -12,8 +12,6 @@ QA Automation Engineer
 sukraydin29@gmail.com
 
 https://www.linkedin.com/in/şükrü-aydın
-
----
 
 ### Build Tool
 ```Maven```
@@ -34,5 +32,11 @@ https://www.linkedin.com/in/şükrü-aydın
 ### System Requirements
 ```Java 8 + SDK```
 
-### Additional Info
-I automated UI case on amazon.com
+### Nice to Know
+Having 2 layers;
+    1. Business Layer --> src > test > resources > features
+    1. Implementation Layer --> src > java > com > intel471 > step_defs
+Automated UI case on amazon.com by using recently created credentials.
+Followed Page Object Model and Singleton Design Pattern.
+
+
