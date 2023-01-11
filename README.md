@@ -33,18 +33,18 @@ https://www.linkedin.com/in/şükrü-aydın
 ```Java 8 + SDK```
 
 ### Nice to Know
-Having 2 layers;
+1 - Having 2 layers;
 
     1. Business Layer --> src > test > resources > features
     2. Implementation Layer --> src > java > com > intel471 > step_defs
-Automated UI case on *amazon.com* by using recently created credentials.
+2 - Automated UI case on <ins>amazon.com</ins> by using recently created credentials.
 
-Followed  <ins>Page Object Model</ins> & <ins>Singleton Design Pattern.</ins>
+3 - Followed  <ins>Page Object Model</ins> & <ins>Singleton Design Pattern.</ins>
 
-Achieved *Data Driven Testing* by configuration.properties and Cucumber Expressions.
+4 - Achieved <ins>Data Driven Testing</ins> by configuration.properties and Cucumber Expressions.
 
-Implemented *Gherkin Language* in feature files.
+5 - Implemented <ins>Gherkin Language</ins> in feature files.
 
-Utilized *Hooks* class for taking screenshots if a test fails.
+6 - Utilized <ins>Hooks</ins> class for taking screenshots if a test fails.
 
 
