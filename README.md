@@ -39,7 +39,7 @@ Having 2 layers;
     2. Implementation Layer --> src > java > com > intel471 > step_defs
 Automated UI case on *amazon.com* by using recently created credentials.
 
-Followed  <ins>*Page Object Model*</ins> & <ins>*Singleton Design Pattern*.</ins>
+Followed  <ins>Page Object Model</ins> & <ins>Singleton Design Pattern.</ins>
 
 Achieved *Data Driven Testing* by configuration.properties and Cucumber Expressions.
 
