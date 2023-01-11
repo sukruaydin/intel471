@@ -33,10 +33,8 @@ public class StepDefs_API {
         APIUtils.updateAnEmployee(id,name,salary,age);
     }
 
-    @Then("User deletes recently created employee")
-    public void userDeletesRecentlyCreatedEmployee() {
+    @Then("User deletes recently created employee \\(id number : {int} )")
+    public void userDeletesRecentlyCreatedEmployeeIdNumber(int id) {
         APIUtils.deleteAnEmployee(id);
     }
-
-
 }

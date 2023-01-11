@@ -1,30 +1,32 @@
 @ui @all
-Feature:
+Feature: Homework UI
 
-  # Background keyword could have been used for the first 3 steps of the scenarios.
-  # In case you would ask me to automate sth more and also to make it read easier I didn't use it.
+  # Using any public e-commerce(dummy) site provide a test framework that tests the following:
 
-  @a
-  Scenario: User can add product(s) to the cart
+      # @a --> successfully add two products to cart and assert that the operation is successful
+      # @b --> remove successfully one of them and assert that the result is correct
+      # @b --> remove successfully the remaining one and assert that the result is correct
+      # @c --> try to remove again one of the products expecting a failed test in this case
+
+  Background:
     Given User navigates amazon.com
     When User clicks sign in bar
     And User logs in
+
+  @a
+  Scenario: User can add product(s) to the cart
     Then User searches "selenium", adds the first product to cart
     Then User searches "turkish coffee", adds the first product to cart
     Then User searches "statue of liberty", adds the first product to cart
 
   @b
   Scenario: User can remove product(s) from cart
-    Given User navigates amazon.com
-    When User clicks sign in bar
-    And User logs in
     Then User removes a product from cart
     Then User removes a product from cart
 
   @c
   Scenario: User can NOT remove product(s) from empty cart
-    Given User navigates amazon.com
-    When User clicks sign in bar
-    And User logs in
     And User removes all products from cart
     Then User removes a product from cart
+    # since it was stated in the assessment instruction that this case should fail, I let this case to fail
+    # It throws RuntimeException

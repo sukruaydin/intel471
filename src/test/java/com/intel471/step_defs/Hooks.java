@@ -18,7 +18,7 @@ public class Hooks {
         }
 
         //for closing the browser
-        //Driver.closeDriver();
+        Driver.closeDriver();
     }
 
 

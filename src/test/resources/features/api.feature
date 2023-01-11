@@ -6,11 +6,11 @@ Feature: Homework RestAPI
   # I created 4 different scenario for you to clearly and easily find out the console output.
 
   # @1 --> successfully retrieves all employees and counts the number of employees with age number higher than 30
-  # @2 -->successfully adds new employee with age higher than 30 and assert that operation is successful
-  # @3 -->successfully updates the employee and asserts that operation is successful
-  # @4 -->successfully deletes the employee that he added and asserts the operation is successful
+  # @2 --> successfully adds new employee with age higher than 30 and assert that operation is successful
+  # @3 --> successfully updates the employee and asserts that operation is successful
+  # @4 --> successfully deletes the employee that he added and asserts the operation is successful
 
-  successfully retrieves all employees and asserts that employees with age number higher than 30 has modified
+  # @5 --> successfully retrieves all employees and asserts that employees with age number higher than 30 has modified
   # this scenario can't be implemented because --> when we send a POST request for creating a new employee,
   #                                                It is not actually created.
   #                                                We can NOT see/return that specific employee by using GET method.
@@ -30,4 +30,7 @@ Feature: Homework RestAPI
 
   @4
   Scenario: 4
-    Then User deletes recently created employee
+    Then User deletes recently created employee (id number : 5 )
+    # normally i should have been provided the id number of recently created employee
+    # but, since it is not actually created there is no such an id number
+    # so I provided id number myself as shown in the scenario step
