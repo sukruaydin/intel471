@@ -17,14 +17,14 @@ https://www.linkedin.com/in/şükrü-aydın
 ```Maven```
 
 ### Dependencies
-selenium-java
-webdrivermanager
-cucumber-java
-cucumber-junit
-reporting-plugin
-rest-assured
-jackson-databind
-javafaker
+```selenium-java```
+```webdrivermanager```
+```cucumber-java```
+```cucumber-junit```
+```reporting-plugin```
+```rest-assured```
+```jackson-databind```
+```javafaker```
 
 ### Build
 ```maven-surefire-plugin```
