@@ -16,6 +16,7 @@ public class StepDefs_UI {
 
     @Given("User navigates amazon.com")
     public void userNavigatesAmazonCom() {
+        //navigates to the given url
         new LoginPage().navigateTo(ConfigurationReader.getProperty("url"));
     }
 
@@ -41,16 +42,19 @@ public class StepDefs_UI {
 
     @And("User searches {string}, adds the first product to cart")
     public void userSearchesAddsTheFirstProductToCart(String product) {
+        //searches and adds the first available product to cart
         new HomePage().searchAndAddTheFirstProductToCart(product);
     }
 
     @And("User removes a product from cart")
     public void userRemovesAProductFromCart() {
+        //removes first product from Cart
         new HomePage().removeAProductFromCart();
     }
 
     @And("User removes all products from cart")
     public void userRemovesAllProductsFromCart() {
+        //empties the Cart
         new HomePage().removeAllProductsFromCart();
     }
 
