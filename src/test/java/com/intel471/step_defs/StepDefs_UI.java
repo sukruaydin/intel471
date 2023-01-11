@@ -22,13 +22,20 @@ public class StepDefs_UI {
     @Then("User clicks sign in bar")
     public void userClicksSignInBar() {
         loginPage = new LoginPage();
+
+        //waits for the visibility of signInBar
         loginPage.waitVisibilityOf(loginPage.signInBar);
+
+        //click on singInBar
         loginPage.signInBar.click();
+
+        //title verification after clicking
         loginPage.verifyTitle("Amazon Sign-In");
     }
 
     @And("User logs in")
     public void userLogsIn() {
+        //logging-in
         new LoginPage().login();
     }
 
