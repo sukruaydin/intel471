@@ -26,7 +26,7 @@ https://www.linkedin.com/in/şükrü-aydın
 ```javafaker```
 ```jackson-databind```
 
-### Build
+### Plugins
 ```maven-surefire-plugin```
 
 ### System Requirements
