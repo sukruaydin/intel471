@@ -33,14 +33,14 @@ https://www.linkedin.com/in/şükrü-aydın
 ```Java 8 + SDK```
 
 ### Nice to Know
-1 - For running the tests;
+1 - For running tests scenarios;
 
         - go to CukerRunner.java class (src > test > java > com > intel471 > runners > CukesRunner)
-        - specify a tag
+        - specify a tag in CucumberOptions
                 * @ui for UI tests
                 * @api for API tests
                 * @all for all tests
-        - run CukesRunner
+        - run CukesRunner.java class
     
 2 - Having 2 layers;
 
