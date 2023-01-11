@@ -1,6 +1,5 @@
 # Case Study Assessment by Intel471
 
----
 
 In this repository, 2 assessments (UI&API) are performed  
 
