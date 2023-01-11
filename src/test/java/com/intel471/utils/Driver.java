@@ -15,6 +15,7 @@ public class Driver {
 
     private static WebDriver driver;
 
+    //sets the driver object
     public static WebDriver getDriver(){
         if (driver == null){
             String browserType = ConfigurationReader.getProperty("browser");
@@ -46,6 +47,7 @@ public class Driver {
         return driver;
     }
 
+    //used for closing browser
     public static void closeDriver(){
         if (driver != null){
             driver.quit();

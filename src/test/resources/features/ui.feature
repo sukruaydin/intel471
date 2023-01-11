@@ -29,4 +29,5 @@ Feature: Homework UI
     And User removes all products from cart
     Then User removes a product from cart
     # since it was stated in the assessment instruction that this case should fail, I let this case to fail
-    # It throws RuntimeException
+    # it throws RuntimeException
+    # also failed case can be examined in the reporting by attached image

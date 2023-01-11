@@ -18,15 +18,15 @@ public abstract class BasePage {
 
     /*
           when navigated to amazon, we encounter 2 website version
-            WebElement amazonLogoWanted --> belongs to version 1 (mostly encountered)
-            WebElement amazonLogoNotWanted --> belongs to version 2 (mostly NOT encountered)
+              - WebElement amazonLogoWanted --> belongs to version 1 (mostly encountered)
+              - WebElement amazonLogoNotWanted --> belongs to version 2 (mostly NOT encountered)
      */
 
-    //
+    //amazon logo mostly encountered, displayed top-left
     @FindBy(id = "nav-logo-sprites")
     public WebElement amazonLogoWanted;
 
-    //
+    //amazon logo mostly NOT encountered, displayed top-left
     @FindBy(id = "nav-bb-logo")
     public WebElement amazonLogoNotWanted;
 

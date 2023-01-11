@@ -19,7 +19,7 @@ public final class HomePage extends BasePage{
 
     //================================= LOCATORS =================================
 
-    //search-box located on top of the screen
+    //search-box displayed on top of the screen
     @FindBy(id = "twotabsearchtextbox")
     public WebElement searchBox;
 
@@ -31,7 +31,7 @@ public final class HomePage extends BasePage{
     @FindBy(id = "productTitle")
     public WebElement productTitle;
 
-    //Add to Cart button located on right side of the screen
+    //Add to Cart button displayed on right side of the screen
     @FindBy(id = "add-to-cart-button")
     public WebElement addToCartButton;
 
@@ -39,7 +39,7 @@ public final class HomePage extends BasePage{
     @FindBy(xpath = "//span[text()[normalize-space() =\"Added to Cart\"]]")
     public WebElement addedToCartText;
 
-    //cart button, navigates into Cart, located top-right
+    //cart button, navigates into Cart, displayed top-right
     @FindBy(xpath = "//span[text()[normalize-space() =\"Cart\"]]")
     public WebElement cartButton;
 

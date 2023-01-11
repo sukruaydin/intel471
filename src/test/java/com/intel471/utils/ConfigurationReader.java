@@ -6,6 +6,8 @@ import java.util.Properties;
 
 public class ConfigurationReader {
 
+    //used for reading configuration.properties values
+
     private static Properties properties = new Properties();
 
     static {
