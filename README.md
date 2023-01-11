@@ -13,6 +13,8 @@ sukraydin29@gmail.com
 
 https://www.linkedin.com/in/şükrü-aydın
 
+---
+
 ### Build Tool
 ```Maven```
 
