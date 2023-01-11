@@ -23,8 +23,8 @@ https://www.linkedin.com/in/şükrü-aydın
 ```cucumber-junit```
 ```reporting-plugin```
 ```rest-assured```
-```jackson-databind```
 ```javafaker```
+```jackson-databind```
 
 ### Build
 ```maven-surefire-plugin```
