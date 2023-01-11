@@ -1,6 +1,5 @@
 # Case Study Assessment by Intel471
 
-
 In this repository, 2 assessments (UI&API) are performed  
 
 ## Instructions
@@ -14,10 +13,10 @@ sukraydin29@gmail.com
 
 https://www.linkedin.com/in/şükrü-aydın
 
-### Build Tool
+## Build Tool
 Maven
 
-### Dependencies
+## Dependencies
 
 
 ### System Requirements
