@@ -1,6 +1,6 @@
 # Case Study Assessment by Intel471
 
-In this repository, 2 assessments (UI&API) assigned by Intel471 are performed by following Cucumber BBD Framework.  
+In this repository, 2 test automation case studies (UI&API) assigned by Intel471 are performed by following Cucumber BBD Framework.  
 
 ## Instructions
 Test Scenarios are prepared by;
@@ -22,8 +22,5 @@ https://www.linkedin.com/in/şükrü-aydın
 ### System Requirements
 Java 8 + SDK
 
-### Test Scenario
-I particulary created scenarios to show how to use Karate Framewrok features.
-There are two more packages names data and utilites.
-In the utilities package, there are different java class for the database connection, data generator and so on.
-Since there are more than one scenarios in some features, there is Parallel runner to execute in parallel.
+### Additional Info
+I automated UI case on amazon.com
