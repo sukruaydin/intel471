@@ -50,12 +50,12 @@ https://www.linkedin.com/in/şükrü-aydın
 
 4 - <ins>Relevant credentials</ins> are located in configuration.properties file.
 
-4 - Followed  <ins>Page Object Model</ins> & <ins>Singleton Design Pattern.</ins>
+5 - Followed  <ins>Page Object Model</ins> & <ins>Singleton Design Pattern.</ins>
 
-5 - Achieved <ins>Data Driven Testing</ins> by configuration.properties and Cucumber Expressions.
+6 - Achieved <ins>Data Driven Testing</ins> by configuration.properties and Cucumber Expressions.
 
-6 - Implemented <ins>Gherkin Language</ins> in feature files.
+7 - Implemented <ins>Gherkin Language</ins> in feature files.
 
-7 - Utilized <ins>Hooks</ins> class for taking screenshots if a test fails.
+8 - Utilized <ins>Hooks</ins> class for taking screenshots if a test fails.
 
 
