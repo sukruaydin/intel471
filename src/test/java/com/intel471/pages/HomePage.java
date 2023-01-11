@@ -102,7 +102,7 @@ public final class HomePage extends BasePage{
 
                     //adds the available product to Cart
                     addAvailableProductToCart();
-                    break;
+                    return;
                 }catch (RuntimeException ex){
                     i++;
                 }
