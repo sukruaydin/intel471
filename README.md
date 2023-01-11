@@ -1,6 +1,6 @@
 # Case Study Assessment by Intel471
 
-In this repository, 2 assessments (UI&API) are performed  
+In this repository, 2 assessments (UI&API) assigned by Intel471 are performed by following Cucumber BBD Framework.  
 
 ## Instructions
 Test Scenarios are prepared by;
@@ -13,10 +13,10 @@ sukraydin29@gmail.com
 
 https://www.linkedin.com/in/şükrü-aydın
 
-## Build Tool
+### Build Tool
 ```Maven```
 
-## Dependencies
+### Dependencies
 
 
 ### System Requirements
