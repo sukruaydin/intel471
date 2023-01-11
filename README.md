@@ -38,6 +38,7 @@ Having 2 layers;
     1. Business Layer --> src > test > resources > features
     2. Implementation Layer --> src > java > com > intel471 > step_defs
 Automated UI case on amazon.com by using recently created credentials.
+
 Followed Page Object Model and Singleton Design Pattern.
 
 
