@@ -34,6 +34,7 @@ https://www.linkedin.com/in/şükrü-aydın
 
 ### Nice to Know
 1 - For running the tests;
+
         - go to CukerRunner.java class (src > test > java > com > intel471 > runners > CukesRunner)
         - specify a tag
                 * @ui for UI tests
