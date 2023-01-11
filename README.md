@@ -17,10 +17,20 @@ https://www.linkedin.com/in/şükrü-aydın
 ```Maven```
 
 ### Dependencies
+selenium-java
+webdrivermanager
+cucumber-java
+cucumber-junit
+reporting-plugin
+rest-assured
+jackson-databind
+javafaker
 
+### Build
+```maven-surefire-plugin```
 
 ### System Requirements
-Java 8 + SDK
+```Java 8 + SDK```
 
 ### Additional Info
 I automated UI case on amazon.com
