@@ -42,10 +42,10 @@ https://www.linkedin.com/in/şükrü-aydın
                 * @all for all tests
         - run CukesRunner.java class
     
-2 - Having 2 layers;
+2 - Cucumber BDD Framework has 2 layers;
 
-    1. Business Layer --> src > test > resources > features
-    2. Implementation Layer --> src > > test > java > com > intel471 > step_defs
+    - Business Layer --> src > test > resources > features
+    - Implementation Layer --> src > > test > java > com > intel471 > step_defs
 3 - Automated UI case on <ins>amazon.com</ins> by using recently created credentials.
 
 4 - Followed  <ins>Page Object Model</ins> & <ins>Singleton Design Pattern.</ins>
